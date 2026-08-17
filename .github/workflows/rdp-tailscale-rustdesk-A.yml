@@ -333,3 +333,10 @@ jobs:
               Write-Host "Dispatched Workflow B with cycles=$next"
             }
           } else { Write-Host "No cycles configured. Done." }
+      - name: Mount G and H Drives
+        run: |
+          # استبدل هذه الأوامر بالأوامر التي استخدمتها أنت يدوياً لربط الدرايفات
+          # مثال باستخدام rclone (يجب أن يكون لديك الإعدادات محفوظة في الـ Secrets):
+          rclone mount remoteG: G: --daemon
+          rclone mount remoteH: H: --daemon
+          Write-Host "Drives G and H mounted successfully!"
